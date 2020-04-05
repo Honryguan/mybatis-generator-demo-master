@@ -33,6 +33,9 @@ public class BasePlugin extends PluginAdapter {
             set.add(new FullyQualifiedJavaType(Annotation.ApiModel.getClazz()));
             topLevelClass.addAnnotation(Annotation.ApiModel.getAnnotation() + "(value=\"" + topLevelClass.getType() + "\",description=\"" + introspectedTable.getRemarks() + "\")");
         }
+//        set.add(new FullyQualifiedJavaType(Annotation.NoArgsConstructor.getClazz()));
+//        topLevelClass.addAnnotation(Annotation.NoArgsConstructor.getAnnotation());
+
         set.add(new FullyQualifiedJavaType(Annotation.DATA.getClazz()));
         set.add(new FullyQualifiedJavaType(Annotation.Builder.getClazz()));
         topLevelClass.addImportedTypes(set);
@@ -71,10 +74,10 @@ public class BasePlugin extends PluginAdapter {
         set.add(new FullyQualifiedJavaType(Annotation.Mapper.getClazz()));
         interfaze.addImportedTypes(set);
         interfaze.addAnnotation(Annotation.Mapper.getAnnotation());
-        //1.3.5之前使用这个
-        //return super.clientGenerated(interfaze, topLevelClass, introspectedTable);
-        //1.3.5之后使用这个
-        return super.clientGenerated(interfaze, introspectedTable);
+        //1.3.6之前使用这个
+        return super.clientGenerated(interfaze, topLevelClass, introspectedTable);
+        //1.3.6之后使用这个
+        //return super.clientGenerated(interfaze, introspectedTable);
     }
 
     /**

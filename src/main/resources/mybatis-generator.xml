@@ -13,7 +13,7 @@
             <property name="impl" value="com.gg.service.impl"/>
             <property name="bean" value="com.gg.bean"/>
             <!-- 是否需要swagger true：是 ： false:否（默认） -->
-            <property name="needSwagger" value="false"/>
+            <property name="needSwagger" value="true"/>
         </plugin>
         <commentGenerator>
             <property name="javaFileEncoding" value="UTF-8"/>
@@ -57,6 +57,22 @@
         <!--生成对应表及类名-->
         <table tableName="tally"
                domainObjectName="Tally"
+               enableCountByExample="true"
+               enableUpdateByExample="true"
+               enableDeleteByExample="true"
+               enableSelectByExample="true"
+               selectByExampleQueryId="true">
+        </table>
+        <table tableName="tally_type"
+               domainObjectName="TallyType"
+               enableCountByExample="true"
+               enableUpdateByExample="true"
+               enableDeleteByExample="true"
+               enableSelectByExample="true"
+               selectByExampleQueryId="true">
+        </table>
+        <table tableName="sys_user"
+               domainObjectName="SysUser"
                enableCountByExample="true"
                enableUpdateByExample="true"
                enableDeleteByExample="true"

@@ -4,6 +4,7 @@ import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import ${package_service}.${file_name}Service;
+import com.gg.utils.BaseResult;
 
 
 import ${package_bean}.${file_name};
