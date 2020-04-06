@@ -7,9 +7,6 @@ import com.gg.utils.BaseResult;
 import org.springframework.web.bind.annotation.*;
 import ${package_bean}.${file_name};
 import ${package_vo}.${file_name}Vo;
-
-
-import com.gg.service.${file_name}Service;
 /**
 * @author honry.guan
 * @created Create Time: ${date?string('yyyy-MM-dd hh:mm:ss')}
