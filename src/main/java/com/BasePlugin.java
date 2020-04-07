@@ -38,10 +38,14 @@ public class BasePlugin extends PluginAdapter {
 
         set.add(new FullyQualifiedJavaType(Annotation.DATA.getClazz()));
         set.add(new FullyQualifiedJavaType(Annotation.Builder.getClazz()));
+        set.add(new FullyQualifiedJavaType(Annotation.NoArgsConstructor.getClazz()));
+        set.add(new FullyQualifiedJavaType(Annotation.AllArgsConstructor.getClazz()));
         topLevelClass.addImportedTypes(set);
 
         topLevelClass.addAnnotation(Annotation.DATA.getAnnotation());
         topLevelClass.addAnnotation(Annotation.Builder.getAnnotation());
+        topLevelClass.addAnnotation(Annotation.NoArgsConstructor.getAnnotation());
+        topLevelClass.addAnnotation(Annotation.AllArgsConstructor.getAnnotation());
 
         try {
             // 生成controller文件

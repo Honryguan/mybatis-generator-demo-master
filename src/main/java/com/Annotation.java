@@ -6,6 +6,7 @@ public enum Annotation {
     DATA("@Data", "lombok.Data"),
     Builder("@Builder", "lombok.Builder"),
     NoArgsConstructor("@NoArgsConstructor", "lombok.NoArgsConstructor"),
+    AllArgsConstructor("@AllArgsConstructor", "lombok.AllArgsConstructor"),
     Mapper("@Mapper", "org.apache.ibatis.annotations.Mapper"),
     Param("@Param", "org.apache.ibatis.annotations.Param"),
     ApiModel("@ApiModel", "io.swagger.annotations.ApiModel"),
